@@ -1,0 +1,8 @@
+enable
+configure terminal
+hostname <name>
+ip router <dest.> <mask> <ip router>
+encapsulation dot1q <number>
+ip address <IP> <MASK>
+interface <f/g Number>
+no shutdown
