@@ -1,1 +1,31 @@
-
+enable
+configure terminal
+hostname <name>
+banner motd "ACESSO APENA PARA O DEPARTAMENTO DE TI"
+enable secret SenhaEnable
+line console 0
+password SenhadaConsole
+login
+exit
+line vty 0 15
+password SenhaVTY
+login
+transport input ssh
+exec-timeout 10
+exit
+username <name> privilege <number 0-15> secret <passport>
+exit
+service password-encryption
+vlan <number>
+name <name>
+end
+do sh vlan brief
+interface <number port>
+switchport mode access
+switchpoort access <number>
+end
+do sh vlan brief
+interface <number port>
+switchport mode trunk
+no shutdown
+exit
