@@ -1,0 +1,33 @@
+enable
+configure terminal
+hostname <name>
+banner motd "ACESSO APENAS PARA PESSOAS AUTORIZADAS"
+enable secret SenhaEnable
+ip domain-name peachanddaisy.local
+crypto key generate rsa general-keys modulus 1024
+line vty 0 15
+password SenhadaVTY
+login
+transport input ssh
+exec-timeout 10
+exit
+username <name> privilege 15 secret <password>
+username estagiario privilege 1 secret <password>
+line console 0
+password SenhadaConsole
+login
+exit
+service password-encryption
+interface <serial number>
+ip address <ip dest.> <mask>
+no shutdown
+exit
+interface <serial number>
+ip address <ip dest.> <mask>
+no shutdown
+exit
+interface <serial number>
+ip address <ip dest.> <mask>
+no shutdown
+interface <g/ number>
+no shutdown
