@@ -1,0 +1,6 @@
+#baxixa o arquivo do servidor FTP/TFTP para a C:
+  ftp>get <nome do arquivo>
+#faz upload de arquivo do PC para o servidor FTP/TFTP
+  ftp>put <nome do arquivo>
+#renomeia o arquivo
+    ft>renomeia <nome antigo> <nome novo>
