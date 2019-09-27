@@ -1,6 +1,6 @@
 enable
 configure terminal
-hostname SW-01
+hostname SW-21
 banner motd "ACESSO APENAS PARA PESSOAS AUTORIZADAS!!!"
 enable secret SenhadaEnable
 line console 0
