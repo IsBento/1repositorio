@@ -1,6 +1,6 @@
 enable
 configure terminal
-hostname SW-01
+hostname SW-12
 banner motd "ACESSO APENAS PARA PESSOAS AUTORIZADAS!!!"
 enable secret SenhadaEnable
 line console 0
