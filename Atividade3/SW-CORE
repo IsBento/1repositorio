@@ -1,0 +1,24 @@
+enable
+configure terminal
+hostname SW-21
+banner motd "ACESSO APENAS PARA PESSOAS AUTORIZADAS!!!"
+enable secret SenhadaEnable
+line console 0
+password SenhadaConsole
+login
+exit
+ip domain-name grupo1.local
+crypto key generate rsa general-keys modulus 1024
+line vty 0 15
+password SenhadaVTY
+login local
+transport input ssh
+exec-timeout 5
+exit
+username maurocortez privilege 15 secret maurocortez
+username isabellabento privilege 15 secret isabellabento
+username danieljunior privilege 15 secret danieljunior
+username victorgomes privilege 15 secret victorgomes
+username brunogaldino privilege 15 secret brunogaldino
+service password-encryption
+======================================================================================
