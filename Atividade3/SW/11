@@ -15,6 +15,8 @@ login local
 transport input ssh
 exec-timeout 5
 exit
+service password-encryption
+ip default-gateway 172.16.1.129
 username maurocortez privilege 15 secret maurocortez
 username isabellabento privilege 15 secret isabellabento
 username danieljunior privilege 15 secret danieljunior
