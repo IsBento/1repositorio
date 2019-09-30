@@ -21,4 +21,34 @@ username danieljunior privilege 15 secret danieljunior
 username victorgomes privilege 15 secret victorgomes
 username brunogaldino privilege 15 secret brunogaldino
 service password-encryption
-======================================================================================
+interface vlan 100
+ip address 172.16.4.197 255.255.255.224
+interface vlan 100
+ip address 172.16.4.222 255.255.255.224
+no shutdown
+exit
+ip default-gateway 172.16.4.193
+interface g1/1
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 10,20,99,10
+description SW-31
+exit
+interface g2/1
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 10,20,99,10
+description CONEXAO COM SWITCH-32
+exit
+interface g0/1
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 10,20,99,100
+description RT-31
+exit
+interface gigabitethernet 3/1
+switchport mode access
+switchport access vlan 100
+description SRV-31
+no shutdown
+do wr
