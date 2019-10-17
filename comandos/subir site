@@ -1,0 +1,27 @@
+#instalar o apache2
+apt-get update
+apt-get install apache 2
+
+#acessar a pasta dites-available
+cd /etc/apache2/sites-available
+
+#editar o arquivo de configuração
+cp 000-default.conf <nome do meu site>.conf
+vim <nome do arquivo>.conf
+
+#editar os seguintes parâmetros
+ServerName <nome do site>
+Server Admin webmaster@<nome do site>
+DocumentRoot /var/www/<nome do site>/html/
+
+#ativar o site
+a2ensite <nome do site>
+
+#efetuaro reload do apache2
+systemctl reload apache2
+
+#criar o diretório do site
+mkdir -p /var/www/<nome do site>/html
+
+#criaro index.html do site
+vim /var/www/<nome do site>/html/index.html
