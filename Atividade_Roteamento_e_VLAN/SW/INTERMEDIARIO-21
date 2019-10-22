@@ -31,9 +31,6 @@ name VLAN30
 vlan 100
 name VLAN100
 exit
-switchport mode access
-switchport access vlan 100
-description SRV
 interface g6/1
 switchport mode trunk
 switchport trunk native vlan 99
