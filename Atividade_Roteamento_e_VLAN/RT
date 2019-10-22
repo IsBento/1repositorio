@@ -1,1 +1,74 @@
-
+enable
+configure terminal
+hostname RT-11
+banner motd "ACESSO APENAS PARA PESSOAS AUTORIZADAS!!!"
+enable secret SenhadaEnable
+line console 0
+password SenhadaConsole
+login
+exit
+ip domain-name grupo1.local
+crypto key generate rsa general-keys modulus 1024
+line vty 0 15
+password SenhadaVTY
+login local
+transport input ssh
+exec-timeout 4
+exit
+username matheuslino privilege 15 secret matheuslino
+username isabellabento privilege 15 secret isabellabento
+username thiago privilege 15 secret thiago
+username victorgomes privilege 15 secret victorgomes
+service password-encryption
+interface g0/1
+ip address 172.16.1.142 255.255.255.240
+no shutdown
+description SW-CORE
+exit
+Interface g0/1.10
+encapsulation dot1Q 10
+ip address 172.16.1.10 255.255.255.128
+description VLAN10
+interface g0/1.20
+encapsulation dot1Q 20
+ip address 172.16.0.10 255.255.255.0
+description VLAN20
+interface g0/1.100
+encapsulation dot1Q 100
+ip address 172.16.1.133 255.255.255.240
+description VLAN 100
+encapsulation dot1Q 10
+interface g0/1.10
+encapsulation dot1Q 10
+ip address 172.16.1.11 255.255.255.128
+description VLAN10
+interface g0/1.20
+encapsulation dot1Q 20
+ip address 172.16.0.11 255.255.255.0
+description VLAN20
+interface g0/1.100
+encapsulation dot1Q 100
+ip address 172.16.1.133 255.255.255.240
+description VLAN 100
+interface g0/1.100
+encapsulation dot1Q 100
+ip address 172.16.1.141 255.255.255.240
+description VLAN 100
+interface g0/1.100
+encapsulation dot1Q 100
+ip address 172.16.1.140 255.255.255.240
+description VLAN 100
+interface serial 0/0/1
+ip address 200.18.189.10 255.255.255.252
+no shutdown 
+interface serial 0/0/0 
+ip address 200.18.189.5 255.255.255.252
+no shutdown
+interface vlan 100
+ip address 172.16.0.129 255.255.255.240
+no shutdown
+ip route 200.18.189.8 255.255.255.252 200.18.189.9 
+ip route 200.18.189.4 255.255.255.252 200.18.189.6
+ip route 200.18.189.8 255.255.255.252 200.18.189.6
+ip route 200.18.189.4 255.255.255.252 200.18.189.9
+do wr
