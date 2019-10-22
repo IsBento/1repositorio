@@ -1,6 +1,6 @@
 enable
 configure terminal
-hostname SW-INTERMEDIARIO-22
+hostname SW-21
 banner motd "ACESSO APENAS PARA PESSOAS AUTORIZADAS!!!"
 enable secret SenhadaEnable
 line console 0
@@ -26,6 +26,8 @@ vlan 10
 name VLAN10
 vlan 20
 name VLAN20
+vlan 30
+name VLAN30
 vlan 100
 name VLAN100
 exit
