@@ -21,9 +21,7 @@ username thiagononato privilege 15 secret thiagononato
 username victorgomes privilege 15 secret victorgomes
 service password-encryption
 interface vlan 100
-ip address 172.16.1.187 255.255.255.224
-interface vlan 100
-ip address 172.16.1.186 255.255.255.224
+ip address 172.16.1.188 255.255.255.224
 no shutdown
 exit
 ip default-gateway 172.16.0.1
