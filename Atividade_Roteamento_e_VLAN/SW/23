@@ -17,11 +17,10 @@ exec-timeout 5
 exit
 service password-encryption
 ip default-gateway 172.16.1.129
-username maurocortez privilege 15 secret maurocortez
+username matheuslino privilege 15 secret matheuslino
 username isabellabento privilege 15 secret isabellabento
-username danieljunior privilege 15 secret danieljunior
+username thiagononato privilege 15 secret thiagononato
 username victorgomes privilege 15 secret victorgomes
-username brunogaldino privilege 15 secret brunogaldino
 service password-encryption
 vlan 10
 name VLAN10
