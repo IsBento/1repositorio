@@ -7,7 +7,7 @@ line console 0
 password SenhadaConsole
 login
 exit
-ip domain-name grupo1.local
+ip domain-name grupo3.local
 crypto key generate rsa general-keys modulus 1024
 line vty 0 15
 password SenhadaVTY
@@ -42,9 +42,7 @@ encapsulation dot1Q 100
 ip address 172.16.2.161 255.255.255.224
 description VLAN100
 no shutdown
-
-ip route 200.18.189.8 255.255.255.252 200.18.189.9 
-
+ip route 172.16.0.0 255.255.254.0 200.18.189.2
 do wr
 
 ====================================================================================================
@@ -57,7 +55,7 @@ line console 0
 password SenhadaConsole
 login
 exit
-ip domain-name grupo1.local
+ip domain-name grupo3.local
 crypto key generate rsa general-keys modulus 1024
 line vty 0 15
 password SenhadaVTY
@@ -88,8 +86,5 @@ encapsulation dot1Q 100
 ip address 172.16.1.129 255.255.255.240
 description VLAN100
 no shutdown
-
-
-ip route 200.18.189.8 255.255.255.252 200.18.189.9 
-
+ip route 172.16.2.0 255.255.254.0 200.18.189.1 
 do wr
