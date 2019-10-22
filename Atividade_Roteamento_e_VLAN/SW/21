@@ -34,15 +34,15 @@ exit
 interface f0/1
 switchport mode access
 switchport access vlan 10
-description PC-21
+description PC-11
 interface f0/2
 switchport mode access
 switchport access vlan 20
-description PC-22
+description PC-12
 interface f0/3
 switchport mode access
 switchport access vlan 30
-description PC-23
+description PC-13
 interface g0/1
 switchport mode trunk
 switchport trunk native vlan 99
