@@ -1,0 +1,59 @@
+enable
+configure terminal
+hostname SW-21
+banner motd "ACESSO APENAS PARA PESSOAS AUTORIZADAS!!!"
+enable secret SenhadaEnable
+line console 0
+password SenhadaConsole
+login
+exit
+ip domain-name grupo3.local
+crypto key generate rsa general-keys modulus 1024
+line vty 0 15
+password SenhadaVTY
+login local
+transport input ssh
+exec-timeout 5
+exit
+service password-encryption
+ip default-gateway 172.16.2.1
+username matheuslino privilege 15 secret matheuslino
+username isabellabento privilege 15 secret isabellabento
+username thiagononato privilege 15 secret thiagononato
+username victorgomes privilege 15 secret victorgomes
+service password-encryption
+vlan 10
+name VLAN10
+vlan 20
+name VLAN20
+vlan 30
+name VLAN30
+vlan 100
+name VLAN100
+exit
+interface f0/1
+switchport mode access
+switchport access vlan 10
+description PC-11
+interface f0/2
+switchport mode access
+switchport access vlan 20
+description PC-12
+interface f0/3
+switchport mode access
+switchport access vlan 30
+description PC-13
+interface g0/1
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 10,20,30,99,100
+description TRUNK ROUTER
+interface g0/2
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 10,20,30,99,100
+description TRUNK ROUTER
+interface vlan 100
+ip address 172.16.1.160 255.255.255.224
+no shutdown
+do wr
