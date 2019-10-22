@@ -15,11 +15,10 @@ login local
 transport input ssh
 exec-timeout 5
 exit
-username maurocortez privilege 15 secret maurocortez
+username matheuslino privilege 15 secret matheuslino
 username isabellabento privilege 15 secret isabellabento
-username danieljunior privilege 15 secret danieljunior
+username thiagononato privilege 15 secret thiagononato
 username victorgomes privilege 15 secret victorgomes
-username brunogaldino privilege 15 secret brunogaldino
 service password-encryption
 interface vlan 100
 ip address 172.16.1.133 255.255.255.240
