@@ -1,6 +1,6 @@
 enable
 configure terminal
-hostname SW-11
+hostname SW-21
 banner motd "ACESSO APENAS PARA PESSOAS AUTORIZADAS!!!"
 enable secret SenhadaEnable
 line console 0
@@ -34,18 +34,15 @@ exit
 interface f0/1
 switchport mode access
 switchport access vlan 10
-description PC-11
+description PC-21
 interface f0/2
 switchport mode access
 switchport access vlan 20
-description PC-12
+description PC-22
 interface f0/3
 switchport mode access
 switchport access vlan 30
-description PC-13
-switchport mode access
-switchport access vlan 100
-description SRV
+description PC-23
 interface g0/1
 switchport mode trunk
 switchport trunk native vlan 99
@@ -56,12 +53,6 @@ switchport mode trunk
 switchport trunk native vlan 99
 switchport trunk allowed vlan 10,20,30,99,100
 description TRUNK ROUTER
-interface vlan 10
-ip address 172.16.2.64 255.255.255.1292
-interface vlan 20
-ip address 172.16.2.0 255.255.255.192
-interface vlan 30
-ip address 172.16.2.128 255.255.255.224
 interface vlan 100
 ip address 172.16.1.160 255.255.255.224
 no shutdown
