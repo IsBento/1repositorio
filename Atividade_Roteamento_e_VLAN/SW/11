@@ -7,7 +7,7 @@ line console 0
 password SenhadaConsole
 login
 exit
-ip domain-name grupo1.local
+ip domain-name grupo2.local
 crypto key generate rsa generate 3-keys modulus 1024
 line vty 0 15
 password SenhadaVTY
