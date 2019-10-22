@@ -7,7 +7,7 @@ line console 0
 password SenhadaConsole
 login
 exit
-ip domain-name grupo3.local
+ip domain-name grupo1.local
 crypto key generate rsa general-keys modulus 1024
 line vty 0 15
 password SenhadaVTY
@@ -43,9 +43,6 @@ interface f0/3
 switchport mode access
 switchport access vlan 30
 description PC-23
-switchport mode access
-switchport access vlan 100
-description SRV
 interface g0/1
 switchport mode trunk
 switchport trunk native vlan 99
@@ -56,12 +53,6 @@ switchport mode trunk
 switchport trunk native vlan 99
 switchport trunk allowed vlan 10,20,30,99,100
 description TRUNK ROUTER
-interface vlan 10
-ip address 172.16.2.64 255.255.255.192
-interface vlan 20
-ip address 172.16.2.0 255.255.255.192
-interface vlan 30
-ip address 172.16.2.128 255.255.255.224
 interface vlan 100
 ip address 172.16.1.160 255.255.255.224
 no shutdown
