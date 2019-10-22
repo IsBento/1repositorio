@@ -17,7 +17,7 @@ exec-timeout 4
 exit
 username matheuslino privilege 15 secret matheuslino
 username isabellabento privilege 15 secret isabellabento
-username thiago privilege 15 secret thiago
+username thiagononato privilege 15 secret thiagononato
 username victorgomes privilege 15 secret victorgomes
 service password-encryption
 interface g0/1
