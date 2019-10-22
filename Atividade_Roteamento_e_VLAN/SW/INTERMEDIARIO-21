@@ -54,6 +54,10 @@ switchport mode trunk
 switchport trunk native vlan 99
 switchport trunk allowed vlan 10,20,30,99,100
 description TRUNK ROUTER
+interface g6/1
+switchport mode access
+switchport access vlan 100
+description SRV-21
 interface vlan 100
 ip address 172.16.2.187 255.255.255.224
 no shutdown
