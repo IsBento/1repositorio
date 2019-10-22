@@ -1,13 +1,13 @@
 enable
 configure terminal
-hostname SW-11
+hostname SW-INTERMEDIARIO-22
 banner motd "ACESSO APENAS PARA PESSOAS AUTORIZADAS!!!"
 enable secret SenhadaEnable
 line console 0
 password SenhadaConsole
 login
 exit
-ip domain-name grupo1.local
+ip domain-name grupo3.local
 crypto key generate rsa general-keys modulus 1024
 line vty 0 15
 password SenhadaVTY
@@ -16,7 +16,7 @@ transport input ssh
 exec-timeout 5
 exit
 service password-encryption
-ip default-gateway 172.16.1.129
+ip default-gateway 172.16.2.1
 username matheuslino privilege 15 secret matheuslino
 username isabellabento privilege 15 secret isabellabento
 username thiagononato privilege 15 secret thiagononato
