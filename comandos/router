@@ -20,14 +20,18 @@ exit
 service password-encryption
 interface <serial number>
 ip address <ip dest.> <mask>
+encapsulation dot1q <vlan>
 no shutdown
 exit
 interface <serial number>
 ip address <ip dest.> <mask>
+encapsulation dot1q <vlan>
 no shutdown
 exit
 interface <serial number>
 ip address <ip dest.> <mask>
+encapsulation dot1q <vlan>
 no shutdown
 interface <g/ number>
 no shutdown
+do wr
