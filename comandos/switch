@@ -29,3 +29,11 @@ interface <number port>
 switchport mode trunk
 no shutdown
 exit
+
+unicast = pay-per-video
+multicast = tv a cabo
+broadcast = tv aberta
+anycast = o mais próximo
+
+mls qos trust cos
+switchport voice vlan <n°vlan>
