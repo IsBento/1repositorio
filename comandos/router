@@ -35,3 +35,6 @@ no shutdown
 interface <g/ number>
 no shutdown
 do wr
+
+
+ip route <ip vlan> <mask vlan> <ip next rede>
