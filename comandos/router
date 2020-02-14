@@ -41,8 +41,15 @@ ip route <ip vlan> <mask vlan> <ip next rede>
 router rip 
 version 2
 no auto-summary
-passive-interface default <entrega> <time-to-live>
-no passive-interface <interface> <não entrega>
+passive-interface default <não entrega-entre roter e sw ou pc> <time-to-live>
+no passive-interface <interface> <entrega-entre roteadores>
+
+
+passive-interface default
+no passive-interface Serial 0/0/0
+OU
+passive-interface default
+passive-interface GigabitEthernet 0/1
 
 default-information originate
 
