@@ -38,3 +38,12 @@ do wr
 
 
 ip route <ip vlan> <mask vlan> <ip next rede>
+router rip 
+version 2
+no auto-summary
+passive-interface default <entrega> <time-to-live>
+no passive-interface <interface> <não entrega>
+
+default-information originate
+
+no auto-summary <não fazer automaticamente sumarização>
