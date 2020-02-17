@@ -54,3 +54,11 @@ passive-interface GigabitEthernet 0/1
 default-information originate
 
 no auto-summary <não fazer automaticamente sumarização>
+
+ROUTER ID
+router ospf 1
+router-id 1.1.1.1
+
+OSPF
+router ospf 1
+network <rede> <wildcard mask> <area>
