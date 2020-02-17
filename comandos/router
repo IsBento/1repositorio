@@ -44,6 +44,7 @@ no auto-summary
 passive-interface default <não entrega-entre roter e sw ou pc> <time-to-live>
 no passive-interface <interface> <entrega-entre roteadores>
 
+no debug router rip
 
 passive-interface default
 no passive-interface Serial 0/0/0
@@ -62,3 +63,5 @@ router-id 1.1.1.1
 OSPF
 router ospf 1
 network <rede> <wildcard mask> <area>
+
+ 
