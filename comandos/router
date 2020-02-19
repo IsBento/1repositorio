@@ -46,11 +46,11 @@ no passive-interface <interface> <entrega-entre roteadores>
 
 no debug router rip
 
-passive-interface default
-no passive-interface Serial 0/0/0
+passive-interface default <geral>
 OU
-passive-interface default
-passive-interface GigabitEthernet 0/1
+passive-interface <porta> <especifico>
+
+no passive-interface <porta> <ativa>
 
 default-information originate
 
