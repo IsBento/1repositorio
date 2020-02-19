@@ -64,4 +64,9 @@ OSPF
 router ospf 1
 network <rede> <wildcard mask> <area>
 
+router rip
+redistribute ospf 1 metric 1
+
+router ospf
+redistribute ospf 1 metric 1
  
