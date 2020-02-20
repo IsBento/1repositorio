@@ -69,4 +69,8 @@ redistribute ospf 1 metric 1
 
 router ospf
 redistribute ospf 1 metric 1
+
+router bgp 65000
+neighbor <rede> remote-as 65001
+network <rede> mask <mask>
  
