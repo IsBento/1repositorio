@@ -37,3 +37,7 @@ anycast = o mais próximo
 
 mls qos trust cos
 switchport voice vlan <n°vlan>
+
+do sh arp
+
+arp -a <comando para cmd>
