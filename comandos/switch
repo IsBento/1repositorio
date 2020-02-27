@@ -41,3 +41,5 @@ switchport voice vlan <n°vlan>
 do sh arp
 
 arp -a <comando para cmd>
+
+do sh spanning-tree
