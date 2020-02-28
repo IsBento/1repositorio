@@ -51,3 +51,4 @@ spanning-tree vlan 1 priority 23456 <mudar prioridade>
 
 sh interfaces | in FastEthernet <mostra somente as interfaces>
 
+sh mac-address-table <mostra o n° mac das portas ligadas>
