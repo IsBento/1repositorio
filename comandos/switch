@@ -46,3 +46,5 @@ do sh spanning-tree
 
 spanning-tree vlan 1 <habilita>
 no spanning-tree vlan 1 <desabilita>
+
+spanning-tree vlan 1 priority 23456 <mudar prioridade>
