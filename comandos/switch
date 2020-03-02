@@ -60,4 +60,4 @@ no spanning-tree portfast disable <ativar portfast>
 
 no spanning-tree portfast bpdu-guard disable 
 
-no panning-tree portfast bpdu-filter disable
+no panning-tree portfast bpdu-filter disable <entende que há outro switch>
