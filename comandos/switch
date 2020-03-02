@@ -28,6 +28,7 @@ interface ...
 switchport port-security <proteger interface>
 switchport-security maximum 2 <n° de mac permitido> <mais de 2 mac add bloqueia>
 sh port-security interface ...
+switchport port-security violation restrict
 
 end
 do sh vlan brief
