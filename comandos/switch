@@ -57,3 +57,5 @@ sh interfaces | in line protocol | address <somente interfaces conectadas e não
 spanning-tree mode rapid-pvst <ativar rapid spanning-tree>
 
 no spanning-tree portfast disable <ativar portfast>
+
+no spanning-tree portfast bpdu-guard disable 
