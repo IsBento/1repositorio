@@ -24,6 +24,7 @@ interface <number port>
 switchport mode access
 switchpoort access <number>
 
+SECURANÇA EM CAMADA 2 !!!!!!
 interface ...
 switchport port-security <proteger interface>
 switchport-security maximum 2 <n° de mac permitido> <mais de 2 mac add bloqueia>
