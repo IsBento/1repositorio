@@ -59,3 +59,5 @@ spanning-tree mode rapid-pvst <ativar rapid spanning-tree>
 no spanning-tree portfast disable <ativar portfast>
 
 no spanning-tree portfast bpdu-guard disable 
+
+no panning-tree portfast bpdu-filter disable
