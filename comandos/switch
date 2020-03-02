@@ -55,3 +55,5 @@ sh spanning-tree detail <interfaces conectadas no spanning-tree>
 sh interfaces | in line protocol | address <somente interfaces conectadas e não ativas>
 
 spanning-tree mode rapid-pvst <ativar rapid spanning-tree>
+
+no spanning-tree portfast disable <ativar portfast>
