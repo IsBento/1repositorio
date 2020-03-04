@@ -69,4 +69,18 @@ no spanning-tree portfast disable <ativar portfast>
 no spanning-tree portfast bpdu-guard disable 
 no panning-tree portfast bpdu-filter disable <entende que há outro switch>
 
+SERVIDOR VTP
+vtp modo server
+vtp domain 'nome'
+vtp password 'senha'
 
+CLIENT VTP
+vtp mode client
+vtp domain 'nome'
+vtp password 'senha'
+
+sh vtp status
+sh vtp password
+
+VTP TRANSPARENTE
+vtp mode transparent
