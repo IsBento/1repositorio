@@ -85,3 +85,14 @@ vtp mode transparent
 
 sh vtp status
 sh vtp password
+
+
+CDP
+cdp run <habilita globalmente no equipamento>
+no cdp run <desabilita>
+
+interface 'interface' <ativa somente em uma interface especifica>
+cdp enable
+
+interface 'interface' <desativa somente em uma interface especifica>
+no cdp enable
