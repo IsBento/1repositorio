@@ -96,3 +96,7 @@ cdp enable
 
 interface 'interface' <desativa somente em uma interface especifica>
 no cdp enable
+
+sh cdp entry
+sh cdp 'interface'
+sh cdp neighbors <resumo de quem está conectado ao equipamento>
