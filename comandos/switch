@@ -110,3 +110,5 @@ ETHERCHANNEL - fazer sempre em duplas de SW e mesmos protocolos
 interface range 'interfaces' <identificar interfaces que será ultilizada>
 change-group 'n° grupo' mode 'modo-escolher se é PAGP OU LACP' <configurar etherchannel>
 
+sh etherchannel summary
+sh etherchannel port-etherchannel
