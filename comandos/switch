@@ -4,11 +4,11 @@ hostname <name>
 banner motd "ACESSO APENA PARA O DEPARTAMENTO DE TI"
 enable secret SenhaEnable
 line console 0
-password SenhadaConsole
+password <SenhadaConsole>
 login
 exit
 line vty 0 15
-password SenhaVTY
+password <SenhaVTY>
 login
 transport input ssh
 exec-timeout 10
@@ -96,7 +96,17 @@ cdp enable
 
 interface 'interface' <desativa somente em uma interface especifica>
 no cdp enable
-
+n° grupo' mode 'modo'
 sh cdp entry
 sh cdp 'interface'
 sh cdp neighbors <resumo de quem está conectado ao equipamento>
+
+ETHERCHANNEL
+PAGP
+
+
+
+ETHERCHANNEL - fazer sempre em duplas de SW e mesmos protocolos
+interface range 'interfaces' <identificar interfaces que será ultilizada>
+change-group 'n° grupo' mode 'modo-escolher se é PAGP OU LACP' <configurar etherchannel>
+
