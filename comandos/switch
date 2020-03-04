@@ -79,8 +79,9 @@ vtp mode client
 vtp domain 'nome'
 vtp password 'senha'
 
-sh vtp status
-sh vtp password
-
 VTP TRANSPARENTE
 vtp mode transparent
+
+
+sh vtp status
+sh vtp password
